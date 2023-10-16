@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo (1).png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                    
+            
+                <div><img src="poto1.jpg" class="gambar"></div>
+                
+            </nav>
+            <div class="header-text">
+                <p>Information Technology Students</p>
+                <h1>Hi, i'm <span>Marvitha Khairani</span> <br>from Indonesia </h1>
+            </div>
+        </div>
+    </div>
+    <!------ About ------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="gambar2" height="500px" src="poto2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>I am an information technology student at the University of North Sumatra, my enjoyment of exploring and creating new innovations makes me interested in studying technology.
+                        In the world of technology you could say I am a beginner, some people say that learning about IT is difficult, but I don't think it will be difficult if we really want to.
+                        In the world of IT we can explore many new things and will gain
+                        an experience that will be very memorable.
+                         And on this website I want to invite you to see my experiences in the world of technology.</p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('interest')">Interest</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('profile')">Profile</p>
+                             </div>
+                             
+                        <div class="tab-contents active-tab" id="interest">
+                             <ul class="interest">
+                                <li><span>Web Dev</span><br>Build, create, and maintain applications that work over the internet such as websites.</li>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Cyber Security</span><br> protect computer systems, networks, and data from attacks or illegal access</li>
+                             </ul></div>
+
+                        <div class="tab-contents" id="education">
+                        <ul class="education">
+                            <li><span>Senior Hight School</span><br>SMAS Cahaya Medan</li>
+                            <li><span>University</span><br>University of North Sumatra</li>
+                         </ul></div>
+
+                        <div class="tab-contents" id="profile">
+                            <ul class="profile">
+                                <li><span>Full Name</span><br>Marvitha Khairani Evaninta Butar Butar</li>
+                                <li><span>Place-Birth Date</span><br>Medan - 19 September 2005</li>
+                                <li><span>Status</span><br>A Student</li>
+                                <li><span>hobby</span><br>Reading, traveling, cycling</li>
+                                <li><span>Vision</span><br>Cumlaude</li>
+
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----Contact------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>contact marvithabutar@gmail.com</p>
+                <p>081397991543</p>
+                <p>My social media <br> <a href="https://instagram.com/marvitha_khairani?igshid=MzMyNGUyNmU2YQ==" target="_blank"><i>IG</i></a></p>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+
+                </form>
+            </div>
+        
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-------JS------->
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links")
+        var tabcontents = document.getElementsByClassName("tab-contents")
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
